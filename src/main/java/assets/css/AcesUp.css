@@ -1,0 +1,280 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+.application {
+    position: relative;
+    height: 600px;
+    width: 900px;
+    border: 1px solid black;
+    background-color: #07b055;
+    background-image: url("/assets/45-degree-fabric-dark.png");
+}
+
+.game_help_area {
+    position: absolute;
+    left: 0px;
+    height: 600px;
+    width: 684px;
+}
+
+.main_div {
+    padding: 7px;
+    width: 684px;
+    height: 575px;
+    box-sizing: border-box;
+}
+
+.moveButton {
+    background-color: rgba(255,255,50,0.5);
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.moveButton:hover {
+    background-color: rgba(255,255,50,1);
+}
+
+tr {
+    width: 684px;
+    height: 35px;
+}
+
+td {
+    width: 200px;
+    text-align: center;
+}
+
+.cardLocation {
+    border-radius: 6px;
+    background-color: #F0F0F0;
+    background-color: rgba(255,255,255,0.9);
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.columnOfCards:hover {
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 8px;
+}
+
+.info_div {
+    position: absolute;
+    bottom: 0;
+    padding: 3px;
+    border-top: 0.5px solid black;
+    height: 24px;
+    width: 678px;
+    background-color: rgba(150, 150, 150, 0.7);
+    text-align: center;
+}
+
+.modeButton_english {
+    position: absolute;
+    left: 0px;
+    margin-left: 3px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 18px;
+	border: 1px solid black;
+    background-color: rgba(255, 0, 0, 1);
+    color: rgba(255,255,255,1);
+}
+
+button.modeButton_english:hover span{
+	display:none
+}
+
+button.modeButton_english:hover:before{
+	content:"SWITCH MODES"
+}
+
+.info_div .modeButton_english:hover{
+    background-color: rgba(255, 255, 0, 1);
+    color: rgba(0, 0, 0, 1);
+}
+
+
+.modeButton_spanish {
+    position: absolute;
+    left: 0px;
+    margin-left: 3px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 18px;
+	border: 1px solid black;
+    background-color: rgba(255, 255, 0, 1);
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 0, 1);
+    color: rgba(0, 0, 0, 1);
+}
+
+button.modeButton_spanish:hover span{
+	display:none
+}
+
+button.modeButton_spanish:hover:before{
+	content:"SWITCH MODES"
+}
+
+.info_div .modeButton_spanish:hover {
+    background-color: rgba(255, 0, 0, 1);
+    color: rgba(255,255,255,1)
+}
+
+.score_div {
+    position: absolute;
+    left: 0;
+    margin-left: 6px;
+    padding: 1px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.alert_div {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.resetButton {
+    position: absolute;
+    right: 0px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 18px;
+    background-color: rgba(150,150,150,0.3);
+    color: rgba(0,0,0,0.5);
+}
+
+.info_div .resetButton:hover {
+    background-color: rgba(200,200,200,1);
+    color: rgba(0,0,0,1);
+}
+
+.side_div {
+    position: absolute;
+    right: 0;
+    width: 216px;
+    height: 600px;
+    border-left: 1px solid black;
+    background-color: #057539;
+    background-image: url("/assets/45-degree-fabric-dark.png");
+}
+
+.deck {
+    position: absolute;
+    padding: 5px;
+    top: 50px;
+    left: 52px;
+    height: 150px;
+    width: 100px;
+}
+
+.deck:hover {
+    background-color: rgba(200,200,200,0.5);
+    border-radius: 6px;
+}
+
+.discard {
+    position: absolute;
+    bottom: 50px;
+    left: 57px;
+    width: 100px;
+    height: 150px;
+}
+
+.modeButton {
+    position: absolute;
+    bottom: 0;
+    border-radius: 3px;
+    margin-left: 35px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid black;
+}
+
+.modeEnglish {
+     background-color: rgba(255, 0, 0, 1);
+     color: rgba(255,255,255,1);
+}
+
+.modeSpanish {
+    background-color: rgba(255, 255, 0, 1);
+    color: rgba( 0, 0, 0,1);
+}
+
+.modeEnglish span:before {
+    content: "MODE: ENGLISH"
+}
+
+.modeSpanish span:before {
+    content: "MODE: SPANISH"
+}
+
+.modeButton:hover span {display: none;}
+
+.modeButton:hover:before{
+	content:"SWITCH MODES"
+}
+
+.site-title {
+    width: 900px;
+    text-align: center;
+}
+
+.modal-backdrop {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(192,192,192,0.7);
+    z-index: 10000;
+}
+
+.modal-window {
+    position: absolute;
+    display: block;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 10001;
+    border-radius: 5px;
+    top: 100px;
+    right: 250px;
+    text-align: center;
+}
+
+.modal-title {
+    font-size: 50px;
+}
+
+.modal .resetButton {
+    left: 165px;
+    font-size: 20px;
+    color: rgba(0,0,0,1);
+    background-color: rgba(200,200,200,1);
+}
+
+.modal {
+    display: none;
+}
+
+.redBackground:hover {
+    background-color: rgba(255,0,0,0.5);
+    border-radius: 8px;
+}
+

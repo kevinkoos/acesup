@@ -1,0 +1,457 @@
+<html>
+<div class="site-title">
+    <h1>Aces Up</h1>
+</div>
+
+<link href="/assets/css/AcesUp.css" rel="stylesheet">
+<script type="text/javascript" src="/assets/webjars/jquery/2.1.3/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<body>
+<div class="application">
+    <div class="game_help_area">
+        <div class="main_div">
+            <table>
+                <tr class="title">
+                    <td>
+                        <button class="moveButton" id="move0" onclick="moveCard(0)">Move</button>
+                    </td>
+                    <td>
+                        <button class="moveButton" id="move1" onclick="moveCard(1)">Move</button>
+                    </td>
+                    <td>
+                        <button class="moveButton" id="move2" onclick="moveCard(2)">Move</button>
+                    </td>
+                    <td>
+                        <button class="moveButton" id="move3" onclick="moveCard(3)">Move</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columnOfCards" id="c0">
+                        <table>
+                            <tr>
+                                <td class="cardLocation l0"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l1"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l2"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l3"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l4"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l5"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l6"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l7"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l8"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l9"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l10"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l11"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l12"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l13"></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="columnOfCards" id="c1">
+                        <table>
+                            <tr>
+                                <td class="cardLocation l0"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l1"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l2"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l3"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l4"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l5"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l6"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l7"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l8"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l9"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l10"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l11"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l12"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l13"></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="columnOfCards" id="c2">
+                        <table>
+                            <tr>
+                                <td class="cardLocation l0"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l1"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l2"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l3"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l4"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l5"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l6"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l7"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l8"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l9"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l10"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l11"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l12"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l13"></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="columnOfCards" id="c3">
+                        <table>
+                            <tr>
+                                <td class="cardLocation l0"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l1"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l2"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l3"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l4"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l5"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l6"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l7"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l8"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l9"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l10"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l11"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l12"></td>
+                            </tr>
+                            <tr>
+                                <td class="cardLocation l13"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="info_div">
+            <div class="score_div">
+                <span id="scoreText"></span>
+            </div>
+            <button type="button" class="resetButton">RESET</button>
+            <div class="alert_div">
+                <span id="feedbackText"></span>
+            </div>
+        </div>
+    </div>
+    <div class="side_div">
+        <div class="deck" id="dealButton" align="center">
+            <input type="image" src="/assets/cardback.jpg"/>
+        </div>
+        <div class="discard" align="center">
+        </div>
+	<div>
+            <button type="button" class="modeButton modeEnglish">
+                <span></span>
+            </button>
+
+        </div>    
+    </div>
+    <div class="modal modal-backdrop"></div>
+    <div class="modal modal-window">
+        <h2 class="modal-title"></h2>
+	    <div class="modal-button"><button type="button" class="resetButton">RESET</button></div>
+    </div>
+</div>
+<script>
+	var game;
+	var flag = true;
+
+	function display(game) {
+	    console.log(game);
+
+	    $( '.columnOfCards .cardLocation' ).html("");
+	    $.each(game.table.columns[0], function( key, val ) {
+            $( '#c0 .l'+key ).html(get_value(val.value) + get_suit(val.suit));
+    	    });
+
+ 	    $.each(game.table.columns[1], function( key, val ) {
+          	$( '#c1 .l'+key ).html(get_value(val.value) + get_suit(val.suit));
+    	    });
+
+	    $.each(game.table.columns[2], function( key, val ) {
+        	$( '#c2 .l'+key ).html(get_value(val.value) + get_suit(val.suit));
+    	    });
+
+	    $.each(game.table.columns[3], function( key, val ) {
+        	$( '#c3 .l'+key ).html(get_value(val.value) + get_suit(val.suit));
+    	    });
+
+	    $('#scoreText').html('Score: ' + game.score);
+	    $('#feedbackText').html(game.feedbackText);
+
+ 	    //removes deck cardback
+ 	    if (game.deck.deck.length == 0) {
+ 	        $('#dealButton').html('');
+ 	    }
+ 	    //add discard cardback to discard pile
+ 	    if(flag == true && game.score > 0){
+ 	        $('.discard').append('<img src="/assets/cardback.jpg" id="discardPile"/>');
+ 	        flag = false;
+ 	    }
+
+ 	    //check player win/lose
+        if (game.playerLost) {
+            $('.modal-title').html('Game over!');
+            $('.modal').show()
+        } else if (game.playerWon) {
+            $('.modal-title').html('You\'ve WON!');
+            $('.modal').show()
+        }
+	}
+
+
+	function get_suit(suit){
+    	    if(suit == "Hearts"){
+        	return '<span style="color:red">&#9829;</span>';
+    	    } else if(suit == "Spades"){
+        	return '<span style="color:black">&#9824;</span>';
+    	    } else if(suit == "Diamonds"){
+        	return '<span style="color:red">&#9830;</span>';
+            } else if(suit == "Clubs"){
+        	return '<span style="color:black">&#9827;</span>';
+    	    } else if(suit == "Copas"){
+                return '<img src="/assets/cup.png" alt="Copas" width="10" height="10"/>';
+            } else if(suit == "Espadas"){
+                return '<img src="/assets/sword.png" alt="Espadas" width="10" height="10"/>';
+            } else if(suit == "Oros"){
+                return '<img src="/assets/coin.png" alt="Oros" width="10" height="10"/>';
+            } else if(suit == "Bastos"){
+                return '<img src="/assets/club.png" alt="Bastos" width="10" height="10"/>';
+            }
+            else if (suit == "JOKER"){
+                return '';
+            }
+	}
+
+    function get_value(val){
+        if (game.deckType == 'S') {
+            if (val == 13)
+                return 'Ace';
+            else if (val == 12)
+                return 'Rey';
+            else if (val == 11)
+                return 'Caballo';
+            else if (val == 10)
+                return 'Sota';
+            else if (val == 0)
+                return 'Joker';
+            else
+                return val;
+        }
+        else {
+            if (val <= 10)
+                return val;
+            else if (val == 11)
+                return 'Jack';
+            else if (val == 12)
+                return 'Queen';
+            else if (val == 13)
+                return 'King';
+            else if (val == 14)
+                return 'Ace';
+        }
+    }
+
+	// Calls ApplicationController.gameGet()
+	$.getJSON("http://localhost:8080/game", function( data ) {
+        game = data;
+        display(data);
+	});
+
+
+	$("#dealButton").click(function(){
+	    $.ajax({
+		type: "POST",
+		url: "/dealGame",
+  		data: JSON.stringify(game),
+  		success: function(data, status){
+		    console.log("Data: " + data + "\nStatus: " + status);
+        	    game = data;
+        	    display(data);
+		},
+  		contentType:"application/json; charset=utf-8",
+  		dataType:"json",
+	    });
+	});
+
+
+
+	function removeCard(colNumber){
+	    $.ajax({
+		type: "POST",
+		url: "/removeCard/"+colNumber,
+		data: JSON.stringify(game),
+		success: function(data, status){
+		    console.log("Data: " + data + "\nStatus: " + status);
+		    game = data;
+		    display(data);
+		    var select = "#c"+colNumber;
+		    if (game.feedbackText != "" && game.feedbackText != "Joker used!") {
+                	$(select).toggleClass("redBackground");
+                	setTimeout(function () {
+                    	    $(select).toggleClass("redBackground");
+                	}, 90);
+            	    }
+		},
+		contentType:"application/json; charset=utf-8",
+		dataType:"json",
+	    });
+	}
+
+
+	$("table").on('click',"#c0",function(){
+	    removeCard(0);
+	});
+	$("table").on('click',"#c1",function(){
+	    removeCard(1);
+	});
+	$("table").on('click',"#c2",function(){
+	    removeCard(2);
+	});
+	$("table").on('click',"#c3",function(){
+  	    removeCard(3);
+	});
+
+
+
+	function moveCard(colFrom){
+	    $.ajax({
+            type: "POST",
+            url: "/moveCard/"+colFrom+"/",
+            data: JSON.stringify(game),
+            success:
+                function(data, status){
+                console.log("Data: " + data + "\nStatus: " + status);
+                game = data;display(data);},
+            contentType:"application/json; charset=utf-8",
+            dataType:"json",
+        });
+    }
+
+	$('.resetButton').click(function() {
+	    $.ajax({
+            type: "POST",
+        	url: "/resetGame",
+         	data: JSON.stringify(game),
+        	success: function(data, status){
+		    console.log("Data: " + data + "\nStatus: " + status);
+            	    game = data;
+                    display(data);
+		},
+        	contentType:"application/json; charset=utf-8",
+        	dataType:"json"
+        });
+	    $('.modal').hide();
+	});
+
+	$('.modeButton').click(function() {
+	    $.ajax({
+            type: "POST",
+        	url: "/switchMode",
+         	data: JSON.stringify(game),
+        	success: function(data, status){
+		    console.log("Data: " + data + "\nStatus: " + status);
+            	    game = data;
+                    display(data);
+		},
+        	contentType:"application/json; charset=utf-8",
+        	dataType:"json"
+        });
+	    $('.modeButton').toggleClass("modeEnglish");
+        $('.modeButton').toggleClass("modeSpanish");
+	});
+
+</script>
+</body>
+</html>

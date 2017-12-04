@@ -17,6 +17,8 @@ public class Game {
 
     public boolean playerWon = false;
 
+    public int highScore = 0;
+
     public Game() {
         this.dealFour();
     }
@@ -81,18 +83,18 @@ public class Game {
         }
         this.dealFour();
     }
-    
+
     public void switchDeck() {
-        if (this.deckType == 'S'){
+        if (this.deckType == 'S') {
             this.deckType = 'E';
-        } else {
+        } else if (this.deckType == 'E') {
             this.deckType = 'S';
         }
-
         this.reset();
     }
 
     //checks if the player has lost, meaning there are no cards in the deck and no removes or moves possible
+    //will return true when the player wins as well, so the score will be updated then
     public void hasPlayerLost() {
         if (!deck.hasCards()) {
             for (int i = 0; i < 4; i++) {
@@ -101,31 +103,11 @@ public class Game {
                 else if (table.canMove(i) >= 0)
                     return;
             }
-
+            //update highscore
+            if (score > highScore) {
+                highScore = score;
+            }
             this.playerLost = true;
         }
-    }
-
-    /*
-        Win conditions:
-           1) Deck is empty
-           2) Each column has no more than 1 card left
-           3) The only cards remaining are Aces
-     */
-    public void hasPlayerWon() {
-        if (deck.hasCards())
-            return;
-        for (int i = 0; i < 4; i++) {
-            if (table.cardCount(i) != 1)
-                return;
-            else {
-                if (deckType == 'S' && table.getTopCardValue(i) != 13)
-                    return;
-                else if (table.getTopCardValue(i) != 14)
-                    return;
-            }
-        }
-
-        playerWon = true;
     }
 }

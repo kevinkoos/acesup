@@ -42,21 +42,18 @@ public class ApplicationController {
             g.dealFour();
         }
         g.hasPlayerLost();
-        g.hasPlayerWon();
         return Results.json().render(g);
     }
 
     public Result removeCard(Context context, @PathParam("column") int colNumber, Game g){
         g.remove(colNumber);
         g.hasPlayerLost();
-        g.hasPlayerWon();
         return Results.json().render(g);
     }
 
     public Result moveCard(Context context, @PathParam("columnFrom") int colFrom, Game g){
         g.move(colFrom);
         g.hasPlayerLost();
-        g.hasPlayerWon();
         return Results.json().render(g);
     }
 

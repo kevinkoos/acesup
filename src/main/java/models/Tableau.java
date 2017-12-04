@@ -8,7 +8,7 @@ public class Tableau {
 
     public Tableau() {
         for (int i = 0; i < 4; i++) {
-            columns.add(i,new ArrayList<Card>());
+            columns.add(i, new ArrayList<Card>());
         }
     }
 
@@ -16,8 +16,8 @@ public class Tableau {
     //pre-conditions: there is a card in column specified by var index
     public boolean canRemove(int index) {
         Card card = this.getTopCard(index);
-        for(int i = 0; i < 4; i++) {
-            if(colHasCards(i)) {
+        for (int i = 0; i < 4; i++) {
+            if (colHasCards(i)) {
                 Card toCompare = getTopCard(i);
                 if (toCompare.getValue() > card.getValue() && toCompare.getSuit() == card.getSuit()) {
                     return true;
@@ -37,14 +37,13 @@ public class Tableau {
         if (suit == Suit.Bastos || suit == Suit.Copas || suit == Suit.Espadas || suit == Suit.Oros) {
             if (value != 13)
                 return -2;
-        }
-        else {
+        } else {
             if (value != 14)
                 return -2;
         }
 
         int emptyIndex = -1;
-        for(int i = 0; i < 4; i++) {
+        for (int i = 0; i < 4; i++) {
             if (!this.colHasCards(i)) {
                 emptyIndex = i;
             }
@@ -55,15 +54,15 @@ public class Tableau {
     //Check if a Joker is available
     //If it is, return its column; otherwise, return -1
     public int existJoker() {
-        for(int i = 0; i < 4; i++) {
-            if(this.colHasCards(i) && this.getTopCardValue(i) == 0)
+        for (int i = 0; i < 4; i++) {
+            if (this.colHasCards(i) && this.getTopCardValue(i) == 0)
                 return i;
         }
         return -1;
     }
 
     public void moveFromToCol(int fromCol, int toCol) {
-        this.addCardToCol(toCol,this.takeTopCard(fromCol));
+        this.addCardToCol(toCol, this.takeTopCard(fromCol));
     }
 
     public void addCardToCol(int colNumber, Card c) {
@@ -74,10 +73,12 @@ public class Tableau {
         return !columns.get(colNumber).isEmpty();
     }
 
-    public int cardCount(int colNumber) { return columns.get(colNumber).size(); }
+    public int cardCount(int colNumber) {
+        return columns.get(colNumber).size();
+    }
 
     public void removeFromCol(int colNumber) {
-        columns.get(colNumber).remove(columns.get(colNumber).size()-1);
+        columns.get(colNumber).remove(columns.get(colNumber).size() - 1);
     }
 
     public int getTopCardValue(int colNumber) {
@@ -96,7 +97,7 @@ public class Tableau {
     }
 
     private Card getTopCard(int colNumber) {
-        return columns.get(colNumber).get(columns.get(colNumber).size()-1);
+        return columns.get(colNumber).get(columns.get(colNumber).size() - 1);
     }
 
 }

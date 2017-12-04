@@ -18,22 +18,24 @@ public class Deck {
         return tempCard;
     }
 
-    public boolean hasCards() { return !this.deck.isEmpty(); }
+    public boolean hasCards() {
+        return !this.deck.isEmpty();
+    }
 
     protected void shuffle() {
         Collections.shuffle(deck);
     }
 
     public void buildDeck() {
-        for(int i = 2; i < 15; i++){
-            deck.add(new Card(i,Suit.Clubs));
-            deck.add(new Card(i,Suit.Hearts));
-            deck.add(new Card(i,Suit.Diamonds));
-            deck.add(new Card(i,Suit.Spades));
+        for (int i = 2; i < 15; i++) {
+            deck.add(new Card(i, Suit.Clubs));
+            deck.add(new Card(i, Suit.Hearts));
+            deck.add(new Card(i, Suit.Diamonds));
+            deck.add(new Card(i, Suit.Spades));
         }
     }
 
-    private Card getTopCard(){
+    private Card getTopCard() {
         return this.deck.get(deck.size() - 1);
     }
 

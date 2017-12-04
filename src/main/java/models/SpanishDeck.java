@@ -5,7 +5,8 @@ import java.util.Collections;
 
 public class SpanishDeck extends Deck {
 
-    public SpanishDeck() {}
+    public SpanishDeck() {
+    }
 
     @Override
     public void buildDeck() {

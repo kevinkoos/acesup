@@ -27,21 +27,11 @@ public class Tableau {
         return false;
     }
 
-    /*returns -1 if no open column is available, -2 if the card to move is not an Ace,
-        and if there is an empty column and an ace return in int 0-3 for the index of the
+    /*returns -1 if no open column is available
+        and if there is an empty column return int 0-3 for the index of the
         empty column.
     */
-    public int canMove(int colFrom) {
-        Suit suit = this.getTopCardSuit(colFrom);
-        int value = this.getTopCardValue(colFrom);
-        if (suit == Suit.Bastos || suit == Suit.Copas || suit == Suit.Espadas || suit == Suit.Oros) {
-            if (value != 13)
-                return -2;
-        } else {
-            if (value != 14)
-                return -2;
-        }
-
+    public int canMove() {
         int emptyIndex = -1;
         for (int i = 0; i < 4; i++) {
             if (!this.colHasCards(i)) {

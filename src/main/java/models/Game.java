@@ -88,6 +88,7 @@ public class Game {
         } else if (this.deckType == 'E') {
             this.deckType = 'S';
         }
+        this.highScore = 0;
         this.reset();
     }
 

@@ -240,6 +240,10 @@
     <div class="modal modal-backdrop"></div>
     <div class="modal modal-window">
         <h2 class="modal-title"></h2>
+        <div class="high-score-div">
+            <span>HIGHSCORE: </span>
+            <span id="highScore"></span>
+        </div>
         <div class="modal-button">
             <button type="button" class="resetButton">RESET</button>
         </div>
@@ -257,6 +261,7 @@
     var modal_title = $('.modal-title'); //title in modal window
     var reset = $('.resetButton'); //reset button
     var mode = $('.modeButton'); //switch mode button
+    var hiscore = $('#highScore');
 
     function display(game) {
         console.log(game);
@@ -294,10 +299,11 @@
         //check player win/lose
         if (game.playerLost === true) {
             $(modal_title).html('Game over!');
-            $(modal).show()
-        } else if (game.score === 48 || (game.score === 46 && game.deckType === 'S')) {
-            $(modal_title).html('You\'ve WON!');
-            $(modal).show()
+            if (game.score === 48 || (game.score === 46 && game.deckType === 'S')) {
+                $(modal_title).html('You\'ve WON!');
+            }
+            $(hiscore).html(game.highScore);
+            $(modal).show();
         }
     }
 

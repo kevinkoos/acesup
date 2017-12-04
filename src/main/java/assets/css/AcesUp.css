@@ -259,7 +259,7 @@ button.modeButton_spanish:hover:before{
 }
 
 .modal-title {
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .modal .resetButton {
@@ -278,3 +278,7 @@ button.modeButton_spanish:hover:before{
     border-radius: 8px;
 }
 
+.high-score-div {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
